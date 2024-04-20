@@ -9,8 +9,8 @@ eureka:
   instance:
     instance-id: ${spring.application.name}:${instanceId:${random.value}}
     preferIpAddress: true
-spring:
 
+spring:
   application:
     name: gatewayService
   cloud:
@@ -25,3 +25,4 @@ spring:
           predicates[0]: Path=/eureka/web
           filters[0]: SetPath=/
           uri: http://localhost:9000
+          
